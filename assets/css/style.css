@@ -1,0 +1,305 @@
+font-face{
+	font-family: 'Calistoga';
+	src: url(../fonts/Calistoga-Regular.ttf);
+}
+
+@font-face{
+	font-family: 'Roboto';
+	src: url(../fonts/roboto/Roboto-Regular.ttf);
+}
+
+@font-face{
+	font-family: 'GreatVibes';
+	src: url(../fonts/GreatVibes-Regular.otf);
+}
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #1A1A33;
+	letter-spacing: 1px;
+}
+
+h1{
+	font-family: 'Calistoga';
+	font-weight: normal;
+	font-size: 2em;
+	padding: 30px 10px;
+	color: white;
+}
+
+h2{
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-size: 2em;
+
+	margin-top: 0;
+}
+
+.big-container{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.container{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #171427EF;
+	width: 100%;
+}
+
+.container:first-child{
+	justify-content: flex-start;
+	background: url(../img/fond-grey.jpg);
+	background-size: cover;
+	background-position: 50%;
+	color: white;
+	flex-direction: column;
+}
+
+.container:last-child{
+	background-color: white;
+	padding: 0 20px;
+	justify-content: center;
+}
+
+.already-subscribed{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+.already-subscribed p{
+	display: inline-block;
+	font-style: italic;
+	font-size: 0.8em;
+}
+
+.already-subscribed button{
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.8em;
+	color: white;
+	border: none;
+	padding: 8px 15px;
+	background: #447CEB;
+	border-radius: 5px;
+	transition: .3s;
+	margin-left: 10px;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
+
+.already-subscribed button:hover{
+	cursor: pointer;
+	background: #051CA9;
+}
+
+.login-form{
+	background: #fff;
+}
+
+.form-group{
+	display: grid;
+	grid-template-columns: 0 100%;
+	margin: 10px 0;
+	padding: 5px 0;
+}
+
+.icon i{
+}
+
+label{
+	display: block;
+	margin-left: 30px;
+	font-size: 0.9em;
+	font-weight: bold;
+}
+
+.required{
+	color: #447CEB;
+	font-weight: normal;
+}
+
+input{
+	font-family: 'Roboto', sans-serif;
+	color: #3A2E46;
+	font-size: 0.9em;
+	width: 480px;
+	min-width: 300px;
+	padding: 10px 15px;
+	margin-top: 5px;
+	background-color: #f9f9f9;
+	border: 1px solid #E9E9E9;
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 5px rgba(2, 2, 0, 0.05), 0 0 5px rgba(255, 255, 255, 0.5), inset -1px -1px 5px rgba(0, 0, 0, 0.05);
+}
+
+input::placeholder {
+	color: #BFBABA;
+	letter-spacing: 1px;
+}
+
+input::invalid{
+	border: 1px solid red;
+}
+
+.form-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+p.forgotten-password{
+	font-size: 0.85em;
+	display: inline-block;
+	margin: 0 8px;
+	color: #447CEB;
+}
+
+div p.required-champs{
+	font-size: 0.85em;
+	display: inline-block;
+	margin: 0 8px;
+	color: #447CEB;
+}
+
+p.forgotten-password:hover{
+	color: #051CA9;
+}
+
+button.subscribe{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	color: white;
+	border: none;
+	padding: 12px 20px;
+	background: #447CEB;
+	border-radius: 5px;
+	transition: .3s;
+	margin-left: 113px;
+	font-weight: bold;
+	letter-spacing: 1.5px;
+}
+
+button.subscribe:hover{
+	cursor: pointer;
+	background: #051CA9;
+}
+
+h2{
+	color: #447CEB;
+}
+
+.alert{
+	display: flex;
+	flex-direction: column;
+	padding: 20px 20px;
+	margin: 30px 0;
+	background: #BB174E;
+	color: white;
+}
+
+.alert ul{
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+	list-style: none;
+}
+
+.alert li{
+	margin-top: 7px;
+	margin-left: 7px;
+}
+
+.favicon-error{
+	margin-right: 8px;
+}
+
+.alert p{
+	margin: 0;
+}
+
+@media(max-width: 1080px){
+	.big-container{
+		grid-template-columns: repeat(1, 1fr);
+	}
+	.container{
+		height: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.container:first-child{
+		padding: 100px 0;
+		padding-bottom: 0;
+		background-position: 50% 20%;
+	}
+
+	.container:first-child{
+		justify-content: space-between;
+	}
+
+	div.inner-container{
+		margin-bottom: 100px;
+	}
+
+	.container:last-child{
+		padding: 50px 0;
+	}
+
+	div.alert{
+		margin: 0;
+		width: 100vw;
+	}
+
+	.already-subscribed p{
+		color: #fff;
+	}
+
+	.already-subscribed button{
+		color: #33333D;
+		background: #fff;
+
+	}
+
+	.already-subscribed button:hover{
+		background: #efefef;
+	}
+}
+
+@media(max-width: 480px){
+	input{
+		width: 90%;
+	}
+
+	.form-footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	button.subscribe{
+		margin-left: 0;
+		margin-top: 15px;
+	}
+
+	.login-form{
+		min-width: 300px;
+	}
+}
