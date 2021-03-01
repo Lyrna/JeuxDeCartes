@@ -56,6 +56,8 @@ if(!empty($_POST)){
 		$requete = $bdd->prepare('INSERT INTO utilisateurs SET pseudo = ?, prenom = ?, nom = ?, email = ?, password = ?');
 
 		$requete->execute([$pseudo, $prenom, $nom, $email, $password]);
+		session_start();
+		$_SESSION['auth'];
 		header('Location: landing.php');
 	}
 }
